@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: UIAutomation/package-lock.json
+          cache-dependency-path: UIAutomationFinalAssessment/package-lock.json
 
       - name: Install Dependencies
         run: npm ci
@@ -58,7 +58,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: UIAutomation/playwright-report/
+          path: UIAutomationFinalAssessment/playwright-report/
           if-no-files-found: warn
 
       - name: Upload Playwright Test Results
@@ -66,7 +66,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-test-results
-          path: UIAutomation/test-results/
+          path: UIAutomationFinalAssessment/test-results/
           if-no-files-found: warn
 
   performance-tests:
@@ -148,7 +148,7 @@ jobs:
 
       - name: Apply bookings schema
         run: |
-          mysql -h127.0.0.1 -P3306 -uroot -p"$DB_PASSWORD" tripstack < src/test/resources/db/migration/V1__init_bookings.sql
+          mysql -h127.0.0.1 -P3306 -uroot -p"$DB_PASSWORD" finalAssessment < src/test/resources/db/migration/V1__init_bookings.sql
 
       - name: Run tests
         run: mvn -B clean test
