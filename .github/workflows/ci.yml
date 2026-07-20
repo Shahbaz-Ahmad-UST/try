@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: UIAutomation
+        working-directory: UIAutomationFinalAssessment
 
     steps:
       - name: Checkout Repository
@@ -76,7 +76,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: UIAutomation
+        working-directory: UIAutomationFinalAssessment
 
     steps:
       - name: Checkout Repository
@@ -106,7 +106,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: APIAutomationFinal
+        working-directory: ApiAutomationFinalAssessment
 
     services:
       mysql:
