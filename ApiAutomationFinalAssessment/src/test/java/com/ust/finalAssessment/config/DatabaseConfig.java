@@ -3,7 +3,7 @@ package com.ust.finalAssessment.config;
 import io.github.cdimascio.dotenv.Dotenv;
 
 public record DatabaseConfig(String jdbcUrl, String username, String password) {
-    static Dotenv dotenv = Dotenv.ignoreIfMissing().load();
+    static Dotenv dotenv = Dotenv.load();
 
 
     public static DatabaseConfig fromEnvironmentCredential() {

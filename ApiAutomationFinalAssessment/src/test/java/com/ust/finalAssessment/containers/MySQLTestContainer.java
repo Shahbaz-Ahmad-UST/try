@@ -10,7 +10,7 @@ public final class MySQLTestContainer {
     private static final String JDBC_URL;
     private static final String USERNAME;
     private static final String PASSWORD;
-    private static Dotenv dotenv = Dotenv.ignoreIfMissing().load();
+    private static Dotenv dotenv = Dotenv.load();
 
     static {
         boolean useTestContainers =
