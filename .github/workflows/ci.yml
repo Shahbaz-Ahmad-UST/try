@@ -148,7 +148,7 @@ jobs:
 
       - name: Apply bookings schema
         run: |
-          mysql -h127.0.0.1 -P3306 -uroot -p"$DB_PASSWORD" finalAssessment < src/test/resources/db/migration/V1__init_bookings.sql
+          mysql -h127.0.0.1 -P3306 -uroot -p"$DB_PASSWORD" tripstack < src/test/resources/db/migration/V1__init_bookings.sql
 
       - name: Run tests
         run: mvn -B clean test
