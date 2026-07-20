@@ -4,6 +4,7 @@ import { env } from "../utils/env";
 import { performance_data } from "../utils/test-data";
 
 
+
 test("Checkout page performance", async ({ flow }) => {
   const input: BookingFlowInput = {
     credentials: env.credentials,
