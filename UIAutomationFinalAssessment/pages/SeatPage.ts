@@ -11,6 +11,7 @@ export class SeatPage extends BasePage {
   }
 
   async selectSeat(seatDescription: string) {
+    await this.page.waitForLoadState('domcontentloaded');
     await this.click(this.seatLocator(seatDescription), `Seat: ${seatDescription}`);
     await this.captureScreenshot("seat-selected");
   }
